@@ -7,7 +7,16 @@ public class LightController : MonoBehaviour
 
     public void ToggleLight()
     {
-        roomLight.enabled = !roomLight.enabled;
-        directionalLight.enabled = !directionalLight.enabled;
+        Debug.Log("Light button clicked");
+
+        if (roomLight != null)
+        {
+            roomLight.enabled = !roomLight.enabled;
+        }
+
+        if (directionalLight != null)
+        {
+            directionalLight.enabled = !directionalLight.enabled;
+        }
     }
 }
